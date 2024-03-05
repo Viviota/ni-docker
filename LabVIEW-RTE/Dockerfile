@@ -1,7 +1,7 @@
 # Get Base Container
 # Requires NIPM Based Image
-ARG NIPM_VERSION=23.5
-FROM viviota/winserver-ni-nipm:$NIPM_VERSION
+ARG SOURCE_TAG=23.5
+FROM viviota/nipm:$SOURCE_TAG
 
 #Define LabVIEW args for path creation
 ARG LABVIEW_YEAR=2021

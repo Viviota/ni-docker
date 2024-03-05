@@ -1,5 +1,8 @@
 # Get Base Container
-FROM mcr.microsoft.com/windows/servercore:ltsc2022
+# servercore OR server (nano does not work)
+ARG BASE=servercore
+ARG BASE_TAG=ltsc2022
+FROM mcr.microsoft.com/windows/$BASE:$BASE_TAG
 ARG NIPM_VERSION=23.5.0
 
 ## Create Users
